@@ -1,0 +1,13 @@
+// Write a program to check which number is greater between two numbers
+#include <stdio.h>
+int main() 
+{
+    int a,b;
+    printf("Enter the integer values for a and b\n");
+    scanf("%d%d", &a,&b);
+    if (a>b)
+       printf("\n%d is greater than %d",a,b);
+    else    
+       printf("\n%d is greater than %d",b,a);
+ return 0;
+}
