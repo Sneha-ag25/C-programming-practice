@@ -1,0 +1,29 @@
+//Add two numbers 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int a, b, c;
+    printf("enter first number");
+    scanf("%d",&a);
+    printf("enter second number");
+    scanf("%d", &b);
+    c=a+b;
+    printf("the answer is: %d",c);
+    
+    system("pause"); 
+    return 0;
+}
+
+Multiply two numbers
+// To multiply twp numbers
+#include <stdio.h>
+int main() 
+{
+    int a,b,product;
+    printf("Enter the values for a and b\n");
+    scanf("%d %d", &a,&b);
+    product=a*b;
+    printf("The product of a and b =%d\n",product);
+    return 0;
+}
