@@ -16,4 +16,6 @@ printf("your grade is A+");
     printf("your grade is D");
 else
     printf("You are fail");
+return 0;
+}
 
