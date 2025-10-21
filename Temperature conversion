@@ -1,0 +1,12 @@
+//Write a program to covert temperature from fahrenheit to celsius
+#include <stdio.h>
+int main() 
+{
+    int a;
+    float celsius;
+    printf("Enter the temperature in fahrenheit\n");
+    scanf("%d", &a);
+    celsius=0.55*(a-32);
+    printf("Temperature in celsius=%.2f",celsius);
+    return 0;
+}
