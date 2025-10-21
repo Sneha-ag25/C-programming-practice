@@ -15,8 +15,7 @@ int main()
     return 0;
 }
 
-Multiply two numbers
-// To multiply twp numbers
+// To multiply two numbers
 #include <stdio.h>
 int main() 
 {
