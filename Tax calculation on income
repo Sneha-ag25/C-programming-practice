@@ -1,0 +1,17 @@
+//Calculate the amount of tax a person has to pay according to his income
+#include<stdio.h> 
+int main()
+{
+int income; 
+printf("enter your income\n");
+scanf("%d", &income);
+if(income<=250000)
+   printf("you dont have to pay tax\n");
+else if(income<=500000 && income>=250000)
+   printf("you have to pay tax = 5% \n"); 
+else if (income<=100000 && income>=500000)
+   printf("you have to pay tax = 20%\n");
+else 
+   printf("you have to pay tax = 30%\n");
+return 0;
+}
