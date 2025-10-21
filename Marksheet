@@ -1,0 +1,19 @@
+//Write a program that returns a letter grade based on a test score. The input will be the integer score from a 100-point test. 
+#include<stdio.h> 
+int main()
+{int a; 
+printf("enter your marks\n");
+scanf("%d", &a);
+if (a>=90 && a<=100) 
+printf("your grade is A+");
+    else if (a>=80 && a<=90)
+    printf("your grade is A");
+    else if (a>=70 && a<=80) 
+    printf("your grade is B");
+    else if (a>=60 && a<=70) 
+    printf("your grade is C");
+    else if (a>=50 && a<=60) 
+    printf("your grade is D");
+else
+    printf("You are fail");
+
