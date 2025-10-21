@@ -1,4 +1,6 @@
 //Write a program to swap two numbers  
+
+Method 1:
 #include<stdio.h> 
 int main()
 {
@@ -11,3 +13,20 @@ b=temp;
 printf("Swapped numbers \n a= %d\n b= %d\n", a,b);
 return 0;
 }
+
+Method 2:
+#include<stdio.h> 
+int main()
+{
+int a, b; 
+printf("enter integer values of a and b\n");
+scanf("%d %d", &a, &b);
+a=a+b;
+b=a-b;
+a=a-b;
+printf("Swapped numbers \n a= %d\n b= %d\n", a,b);
+return 0;
+}
+
+
+
