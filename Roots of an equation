@@ -1,0 +1,21 @@
+// Write a program to find roots of a quadratic equation
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+ int a,b,c,D,x1,x2;
+ printf("Enter the values of a,b,c for ax^2+bx+c=0\n");
+ scanf("%d%d%d",&a,&b,&c);
+ D=sqrt(b*b-4*a*c);
+ if (D==0)
+   {x1=(-1*b/2*a);
+   printf("Roots of %dx^2+%dx+%d=0 are real and equal.\nx1=x2=%d",a,b,c,x1);}
+ else 
+ if(D>0)
+   {x1=((-1*b)+sqrt(D))/2*a;
+   x2=((-1*b)-sqrt(D))/2*a;
+   printf("Roots of %dx^2+%dx+%d=0 are real and distinct.\nx1=%d and x2=%d",a,b,c,x1,x2);}
+ else
+   {printf("Roots of %dx^2+%dx+%d=0 are imaginary.",a,b,c);}
+ return 0;
+}
