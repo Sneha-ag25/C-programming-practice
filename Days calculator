@@ -1,0 +1,41 @@
+//Write a program to calculate total number of days for a given date starting from january 1st 
+#include <stdio.h>
+int main() 
+{
+ int day, month, sum=0, year, remaining=0;
+ printf("Enter the date in the format day/month/year\n");
+ scanf("%d%d%d",&day,&month,&year);
+
+ if(day<1 || month<1 || month>12 || day>31)
+   {printf("Invalid input\n");
+    return 0;} 
+ if(month==2)
+      {if((year%4==0 && !year%100==0) || (year%400==0)) 
+      { if (day>29) {printf("Invalid input\n"); return 0;}}
+       else {if (day>28) {printf("Invalid input\n"); return 0;}}}
+ if((month==4 || month==6 || month==9 || month==11) && (day>30))
+   {printf("Invalid input\n"); return 0;}
+
+ 
+ if (month>=2) sum+=31; 
+ if (month>=3) 
+    {if ((year%4==0 && !year%100==0) || (year%400==0))
+        sum+=29;
+        else sum+=28;}
+ if (month>=4) sum+=31;
+ if (month>=5) sum+=30;
+ if (month>=6) sum+=31;
+ if (month>=7) sum+=30;
+ if (month>=8) sum+=31;
+ if (month>=9) sum+=31;
+ if (month>=10) sum+=30;
+ if (month>=11) sum+=31;
+ if (month>=12) sum+=30;
+ sum+=day;
+ if ((year%4==0 && !year%100==0) || (year%400==0))
+    remaining= 366-sum;
+ else remaining= 365-sum;
+ printf("Date of the year = %d/%d/%d", day, month, year);
+ printf("\nDay of the year = %d", sum);
+ printf("\nNumber of days left in the year = %d", remaining);
+return 0;}
