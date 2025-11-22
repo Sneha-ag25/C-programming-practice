@@ -1,0 +1,18 @@
+//Write a program to check whether an array is sorted or not 
+#include<stdio.h> 
+int main() 
+{int i,n,sort=1 ; 
+ printf("Enter the number of elements of array\n"); 
+ scanf("%d",&n);
+ printf("Enter the array\n");
+ int arr[n];
+ for(i=0;i<n;i++) 
+   scanf("%d",&arr[i]); 
+ for(i=0;i<n-1;i++) 
+   {if (arr[i]>arr[i+1]) 
+    sort=0; break;} 
+ if (sort==0) 
+   printf("Array is not sorted"); 
+ else printf("Array is sorted"); 
+ return 0; 
+}
