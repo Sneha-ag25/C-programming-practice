@@ -1,0 +1,22 @@
+//Write a program to take an array. Split it into the middle and store the elements in two different arrays.
+#include<stdio.h> 
+int main() 
+{int i,n; 
+ printf("Enter the number of elements of array\n"); 
+ scanf("%d",&n);
+ printf("Enter the array\n");
+ int arr[n], first[n], second[n];
+ for(i=0;i<n;i++) 
+   scanf("%d",&arr[i]);
+ for(i=0;i<n/2;i++)
+   first[i]=arr[i];
+ for(i=n/2;i<n;i++)
+   second[i-n/2]=arr[i];
+ printf("First half of the array is");
+  for(i=0;i<n/2;i++)
+ printf("%d",first[i]);
+ printf("\nSecond of the array is");
+  for(i=0;i<n-n/2;i++)
+ printf("%d",second[i]);
+ return 0; 
+}
