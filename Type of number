@@ -1,0 +1,20 @@
+//Write a program to find the number of positive numbers, negative numbers, odd numbers, even numbers, and the number of 0 of an array.
+#include<stdio.h>
+int main()
+{int n,i,pos=0,neg=0,odd=0,even=0,zero=0;
+ printf("Enter the number of elements of array\n");
+ scanf("%d",&n);
+ int arr[n];
+ printf("Enter the array\n");
+ for(i=0;i<n;i++)
+  scanf("%d",&arr[i]);
+ 
+ for(i=0;i<n;i++)
+     {if(arr[i]%2==0) even++;
+     if(arr[i]%2!=0) odd++;
+     if(arr[i]<0) neg++;
+     if(arr[i]>0) pos++;
+     if(arr[i]==0) zero++;}
+ printf("Number of  numbers positive numbers is %d\nNumber of  numbers negative numbers is %d\nNumber of  numbers even numbers is %d\nNumber of  numbers odd numbers is %d\nNumber of  numbers zeros is %d\n",pos, neg, even, odd, zero);  
+ return 0;
+}
