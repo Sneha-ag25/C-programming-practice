@@ -1,0 +1,15 @@
+//Write a program to change all lower-case letters into upper case in a sentence.
+#include<stdio.h> 
+#include<string.h> 
+int main() 
+{ int i;
+  char sent[100];
+  printf("Enter a sentence:\n");
+  fgets(sent, 100, stdin);
+  for (i=0;sent[i]!='\0';i++)
+     {if (sent[i]>='a' && sent[i]<='z')
+        {sent[i]=sent[i]-32;}
+     }
+  printf("Sentence in upper case:\n%s", sent );
+  return 0;
+}
