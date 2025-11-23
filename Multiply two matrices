@@ -1,0 +1,42 @@
+//Write a program to multiply two matrices
+#include<stdio.h> 
+int main() 
+{
+int x,y,i,j; 
+ printf("Enter the number of rows and columns of matrix 1\n");
+ scanf("%d%d",&x,&y);
+ int matrix1[x][y];
+ printf("Enter the elements of the matrix 1\n");
+ for(i=0;i<x;i++)
+    {for(j=0; j<y; j++) {
+     scanf("%d", &matrix1[i][j]);}
+    }
+ int a,b,c,d; 
+ printf("Enter the number of rows and columns of matrix 2\n");
+ scanf("%d%d",&a,&b);
+ int matrix2[a][b];
+ printf("Enter the elements of the matrix 2\n");
+ for(c=0;c<a;c++)
+    {for(d=0; d<b; d++) {
+     scanf("%d", &matrix2[c][d]);}
+    }
+ if (y!=a)
+    {printf("Matrix multiplication not possible");}
+    
+ else 
+    {int result[x][b],k;
+    for (i=0;i<x;i++)
+       {for (j=0;j<b;j++)
+         {result[i][j]=0;
+         for (k=0;k<y;k++)
+           {result[i][j]+=matrix1[i][k]*matrix2[k][j];}
+         }
+       }
+    printf("Result of multiplication=\n");
+    for (i=0;i<x;i++)
+       {for (j=0;j<b;j++)
+        printf("%d ",result[i][j]);
+    printf("\n");} 
+    }
+ return 0; 
+}
