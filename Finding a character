@@ -1,0 +1,19 @@
+//Write a program to find the last occurrence of a particular character.
+#include<stdio.h> 
+#include<string.h> 
+int main() 
+{ int last=-1, i;
+  char sent[100], ch;
+  printf("Enter a sentence:\n");
+  fgets(sent, 100, stdin);
+  printf("Enter the character you want to see\n");
+  scanf(" %c",&ch);
+  for (i=0;sent[i]!='\0';i++)
+     {if (sent[i]==ch)
+         {last=i;}
+     }
+  if (last==-1)
+  printf("Character not found");
+  else printf("Character last found at index %d",last);
+  return 0;
+}
