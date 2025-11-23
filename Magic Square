@@ -1,0 +1,55 @@
+//Write a program to multiply two matrices
+#include<stdio.h> 
+int main() 
+{
+int x,y,i,j; 
+ printf("Enter the number of rows and columns of matrix 1\n");
+ scanf("%d%d",&x,&y);
+ int matrix[x][y];
+ printf("Enter the elements of the matrix 1\n");
+ for(i=0;i<x;i++)
+    {for(j=0; j<y; j++) {
+     scanf("%d", &matrix[i][j]);}
+    }
+    
+ if (x!=y)
+    {printf("Not a magic square");
+    return 0;}
+    
+ int magic_sum=0; 
+      for(j=0;j<y;j++)
+        {magic_sum+=matrix[0][j];}
+ int isMagic=1;
+      for(i=1;i<x;i++)
+         {int row=0;
+           for (j=0;j<y;j++)
+            {row+=matrix[i][j];}
+          if (row!=magic_sum)
+            {isMagic=0; break;}
+         }
+         
+  for(j=0;j<y;j++)
+       {int column=0;
+        for (i=0;i<x;i++)
+         column+=matrix[i][j];
+       if (column!=magic_sum)
+         {isMagic=0; break;}
+       }
+  
+  int d1=0;
+  for(i=0;i<x;i++)
+        {d1+=matrix[i][i];}
+        if (d1!=magic_sum)
+          isMagic=0;
+        
+  int d2=0;
+  for(i=0;i<x;i++)
+        {d2+=matrix[i][x-1-i];}
+        if (d2!=magic_sum)
+          isMagic=0;
+          
+  if (isMagic==1)
+     printf("It is a magic square with magic sum=%d",magic_sum);
+  else printf("It is not a magic square");
+ return 0;
+}
