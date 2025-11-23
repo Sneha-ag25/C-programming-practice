@@ -1,0 +1,24 @@
+//Write a program for searching for an element in the matrix and counting the number of occurrences of that element.
+#include<stdio.h> 
+int main() 
+{
+int x,y,i,j; 
+ printf("Enter the number of rows and columns of the matrix\n");
+ scanf("%d%d",&x,&y);
+ int matrix[x][y];
+ printf("Enter the elements of the matrix\n");
+ for(i=0;i<x;i++)
+    {for(j=0; j<y; j++) {
+     scanf("%d", &matrix[i][j]);}
+    }
+ int n, count=0;
+ printf("Enter the element you want to search\n");
+ scanf("%d",&n);
+  for(i=0;i<x;i++)
+    {for(j=0; j<y; j++)
+     {if (matrix[i][j]==n)
+     count++;}
+    }
+ printf("The total number of occurences of the %d is %d",n,count);
+ return 0; 
+}
