@@ -1,0 +1,16 @@
+//Write a program to find the factorial of a number using a function. (Ex: 5! =5*4*3*2*1. Use a function Fact to evaluate factorial & print the result).
+#include <stdio.h>
+int fact(int n)
+ {int i,f=1;
+ for (i=1;i<=n;i++)
+  {f=f*i;}
+  return f;
+ }
+int main()
+{ int x;
+  printf("Enter an integer:");
+  scanf("%d",&x);
+  int result= fact(x);
+  printf("The factorial of %d is %d",x,result);
+ return 0;
+}
